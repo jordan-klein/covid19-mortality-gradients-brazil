@@ -1,6 +1,6 @@
-# SES and COVID-19 Mortality Analysis
+# Must Whatever Goes up Come Down? Mortality Gradients in the Emergence of COVID-19
 
-This repository contains the R scripts, data structure, and instructions required to reproduce the results and figures from our analysis of socio-economic status (SES) and COVID-19-related mortality under various intervention scenarios.
+This repository contains the R scripts, data structure, and instructions required to reproduce the results and figures from this manuscript.
 
 ---
 
@@ -9,35 +9,30 @@ This repository contains the R scripts, data structure, and instructions require
 ```
 Project/
 ├── Data/
-│   ├── SES/
-│   │   └── IVS_IDHM_quintiles.csv
-│   ├── Population/
-│   │   ├── age_sex_structured_clean.csv
-│   │   └── population_density.csv
-│   ├── Elections/
-│   │   └── Bolsonaro_mean_voteshare.csv
-│   ├── Geospatial/
-│   │   ├── municipalities_cannonical_unitemporal_full.csv
-│   │   └── Municipalities.geojson
-│   ├── Parameters/
-│   │   ├── CFR.csv
-│   │   └── Household_size.csv
-│   ├── Mobility/
-│   │   ├── network_processed.zip
-│   │   └── mvt_range_maps/
-│   │       └── Mobility_change_<intervention>.csv
-│   ├── Vaccination/
-│   │   └── Scenarios/
-│   │       └── Vax_rate_<scenario>.csv
-│   └── Results/
-│       └── Intervention_project/
-│           ├── Model_output.zip
-│           └── Regression_results.zip
-├── ses_quintile_regression.R
-├── results_maps.R
-├── plot_regression_results_interventions.R
-├── extract_deaths_from_model.R
-└── Model.R
+    ├── SES/
+    │   └── IVS_IDHM_quintiles.csv
+    ├── Population/
+    │   ├── age_sex_structured_clean.csv
+    │   └── population_density.csv
+    ├── Elections/
+    │   └── Bolsonaro_mean_voteshare.csv
+    ├── Geospatial/
+    │   ├── municipalities_cannonical_unitemporal_full.csv
+    │   └── Municipalities.geojson
+    ├── Parameters/
+    │   ├── CFR.csv
+    │   └── Household_size.csv
+    ├── Mobility/
+    │   ├── network_processed.zip
+    │   └── mvt_range_maps/
+    │       ├── Mobility_change_actual.csv
+    │       └── Mobility_change_equality.csv
+    └── Vaccination/
+        └── Scenarios/
+            ├── Vax_rate_actual.csv
+            ├── Vax_rate_equality.csv
+            ├── Vax_rate_priority_ivs.csv
+            └── Vax_rate_priority_idhm.csv
 ```
 
 ---
@@ -45,13 +40,19 @@ Project/
 ## 📋 Requirements
 
 These scripts require the following R packages:
+- `this.path`
 - `tidyverse`
 - `data.table`
 - `lubridate`
 - `fixest`
 - `broom`
 - `marginaleffects`
+- `stringr`
+- `dplyr`
 - `sf`
+- `svglite`
+- `scales`
+- `ggallin`
 - `patchwork`
 - `Cairo`
 - `deSolve`
@@ -62,12 +63,12 @@ Each script will automatically install missing packages.
 
 ## ⚙️ Running the Scripts
 
-Each script is designed to be run with command-line arguments or within a pipeline. Here's a brief overview:
+Each script is designed to be run with command-line arguments or within a pipeline. Here's a brief overview with some illustrative examples (adjust filenames and arguments based on your specific run):
 
 ### 1. `Model.R`
 Runs simulations of intervention scenarios.
 ```bash
-Rscript Model.R yes InLoco actual abs_delta Facebook Vax eq .5 1 .189 3.1 no_sensitivity output_filename
+Rscript Model.R yes InLoco actual abs_delta Facebook equality .5 1 .189 3.1 no_sensitivity output_filename
 ```
 
 ### 2. `extract_deaths_from_model.R`
@@ -96,17 +97,11 @@ Rscript results_maps.R yes output_filename
 
 ---
 
-## 📝 Notes
-
-- Adjust filenames and arguments based on your specific run.
-- For double-blind peer review, please anonymize identifiable elements or use [anonymous.4open.science](https://anonymous.4open.science/) to create a reviewer-safe GitHub link.
-- For public sharing (e.g., via Zenodo), include the full data archive where license permits.
-
----
-
 ## 📄 License
 
-This project is shared under the [MIT License](LICENSE).
+This repository is released under the **[CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)** license. You are free to copy, modify, distribute, and use the work, even for commercial purposes, without asking permission.
+
+> **Note**: If you use or build on this work, citation is appreciated but not required.
 
 ---
 
