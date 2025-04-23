@@ -34,7 +34,11 @@ Project/
             ├── Vax_rate_priority_ivs.csv
             └── Vax_rate_priority_idhm.csv
 ```
+📦 Data Archive
 
+All large data files used in this project that are not stored in this github repo are available on Zenodo:
+
+🔗 https://doi.org/10.5281/zenodo.15272482
 ---
 
 ## 📋 Requirements
