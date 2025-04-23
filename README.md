@@ -115,7 +115,3 @@ This project is shared under the [MIT License](LICENSE).
 
 For any questions, contact the corresponding author as listed in the manuscript.
 ```
-
----
-
-Would you like me to generate this as a downloadable file or add sections for how to prepare the repo for Zenodo or GitHub specifically?
