@@ -1,7 +1,3 @@
-Here's a draft `README.md` for your project that clearly outlines the structure, required data files, and how to run the scripts. It's tailored for use in a GitHub repository or Zenodo archive to accompany your manuscript:
-
----
-
 ```markdown
 # SES and COVID-19 Mortality Analysis
 
