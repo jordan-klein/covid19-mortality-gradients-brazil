@@ -1,4 +1,3 @@
-```markdown
 # SES and COVID-19 Mortality Analysis
 
 This repository contains the R scripts, data structure, and instructions required to reproduce the results and figures from our analysis of socio-economic status (SES) and COVID-19-related mortality under various intervention scenarios.
@@ -114,4 +113,3 @@ This project is shared under the [MIT License](LICENSE).
 ## 📫 Contact
 
 For any questions, contact the corresponding author as listed in the manuscript.
-```
