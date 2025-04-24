@@ -38,7 +38,7 @@ Project/
 
 All large data files used in this project that are not stored in this github repo are available on Zenodo:
 
-🔗 https://doi.org/10.5281/zenodo.15272482
+🔗 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15272578.svg)](https://doi.org/10.5281/zenodo.15272578)
 ---
 
 ## 📋 Requirements
