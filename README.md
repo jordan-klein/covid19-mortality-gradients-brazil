@@ -1,6 +1,7 @@
 # Must Whatever Goes up Come Down? Mortality Gradients in the Emergence of COVID-19
 
-This repository contains the R scripts, data structure, and instructions required to reproduce the results and figures from this manuscript: 
+This repository contains the R scripts, data structure, and instructions required to reproduce the results and figures from this manuscript:
+
 Klein, J.D., 2025. Must Whatever Goes up Come Down? Mortality Gradients in the Emergence of COVID-19. medRxiv. [https://doi.org/10.1101/2025.04.23.25326307](https://doi.org/10.1101/2025.04.23.25326307)
 
 
